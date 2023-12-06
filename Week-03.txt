@@ -1,0 +1,47 @@
+# Source data (matrix)
+electricity_matrix = [
+    [50, 150, 250],
+    [80, 120, 180],
+    [100, 200, 300]
+]
+
+# Student's ID
+student_id = "23Y290031"
+
+# Function to calculate and display cost for slab 1
+def costSlab1():
+    units = electricity_matrix[0][0]  # Units for slab 1
+    cost_per_unit = 10
+    total_cost = units * cost_per_unit
+    print(f"Slab 1: Units = {units}, Cost per unit = Rs.{cost_per_unit}, Total Cost = Rs.{total_cost}")
+
+# Function to calculate and display cost for slab 2
+def costSlab2():
+    units = electricity_matrix[1][0]  # Units for slab 2
+    cost_per_unit = 15
+    total_cost = units * cost_per_unit
+    print(f"Slab 2: Units = {units}, Cost per unit = Rs.{cost_per_unit}, Total Cost = Rs.{total_cost}")
+
+# Function to calculate and display cost for slab 3
+def costSlab3():
+    units = electricity_matrix[2][0]  # Units for slab 3
+    cost_per_unit = 20
+    total_cost = units * cost_per_unit
+    print(f"Slab 3: Units = {units}, Cost per unit = Rs.{cost_per_unit}, Total Cost = Rs.{total_cost}")
+
+# Main menu
+while True:
+    print(f"Student ID: {student_id}")
+    print("Press 1 to display bill for slab 1 and slab 2")
+    print("Press 2 to display bill for slab 3")
+    print("Press any other key to exit")
+
+    choice = input("Enter your choice: ")
+
+    if choice == '1':
+        costSlab1()
+        costSlab2()
+    elif choice == '2':
+        costSlab3()
+    else:
+        break
